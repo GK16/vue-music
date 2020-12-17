@@ -5,8 +5,10 @@ function resolve (dir) {
 }
 module.exports = {
   chainWebpack: config => {
-    // 路径配置
+    // 相对路径配置
     config.resolve.alias
       .set('common', resolve('src/common'))
+      .set('src', resolve('src'))
+      .set('components', resolve('src/components'))
   }
 }
